@@ -28,7 +28,7 @@ export default function Header(props) {
     <HeaderContainer>
       <Link to='/'>
           <img src={logoicon} alt='Your Events' />
-          <span>Your Events</span>
+          <span>Flex Events</span>
       </Link>
       <article>
 
