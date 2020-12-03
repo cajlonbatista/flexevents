@@ -7,10 +7,12 @@ import Routes from "./routes";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Header />
-      <Routes />
-    </BrowserRouter>
+    <div>
+      <BrowserRouter>
+        <Header />
+        <Routes />
+      </BrowserRouter>
+    </div>
   );
 }
 

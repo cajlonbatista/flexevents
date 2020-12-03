@@ -26,10 +26,10 @@ export default function Header(props) {
 
   return (
     <HeaderContainer>
-      <div>
-        <img src={logoicon} alt='Your Events'/>
-        Your Events
-      </div>
+      <Link to='/'>
+          <img src={logoicon} alt='Your Events' />
+          <span>Your Events</span>
+      </Link>
       <article>
 
       </article>
@@ -40,12 +40,14 @@ export default function Header(props) {
               {
                 (item.path === location.pathname)
                   ?
-                  <Link to={item.path}>
-                    <img src={item.icon} alt={item.title} style={{ background: '#FF5F5F'}}/>
+                  <Link to={item.path} style={{ background: '#FFFFFF' }}>
+                    <img src={item.icon} alt={item.title} />
+                    <span>{item.title}</span>
                   </Link>
                   :
                   <Link to={item.path}>
                     <img src={item.icon} alt={item.title} />
+                    <span>{item.title}</span>
                   </Link>
               }
             </>
