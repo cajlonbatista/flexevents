@@ -19,5 +19,6 @@ routes.delete('/prevent/:id', Prevent.destroy);
 routes.get('/prevent', Prevent.show);
 
 routes.get('/event/all', All.all);
+routes.get('/event/all/:tag', All.search);
 
 module.exports = routes;

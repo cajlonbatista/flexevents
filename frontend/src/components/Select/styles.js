@@ -27,7 +27,7 @@ export const SelectEvent = styled.section`
     padding: 20px;
     h1{
       font-family: Ubuntu, sans-serif;
-      font-size: 19px;
+      font-size: clamp(1em, 1em + 1vw, 1.25em);
       color: #303030;
       margin: 20px 5px;
       text-align: center;

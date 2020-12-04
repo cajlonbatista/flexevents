@@ -5,7 +5,7 @@ const Prevent = mongoose.model("Prevent");
 module.exports = {
   async show(req, res) {
     try {
-      const onevents = await Prevent.find();
+      const onevents = await Prevent.paginate({ status: 'active' }, { page: 1, limit: 4 });
       return res.status(200).json(onevents);
     } catch (error) {
       return res.status(401).json(error.message);
@@ -14,7 +14,7 @@ module.exports = {
   async search(req, res) {
     try {
       const { tag } = req.params;
-      const onevents = await Prevent.find({ tags: tag });
+      const onevents = await Prevent.find({ tags: tag, status: 'active' });
       return res.status(200).json(onevents);
     } catch (error) {
       return res.status(401).json(error.message);

@@ -17,12 +17,12 @@ export default function Header() {
   const menu = [
     {
       path: '/',
-      title: 'Events',
+      title: 'Eventos',
       icon: feedicon,
     },
     {
       path: '/add',
-      title: 'Create',
+      title: 'Criar',
       icon: addicon,
     },
   ]

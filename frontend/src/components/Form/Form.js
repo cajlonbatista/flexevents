@@ -99,6 +99,7 @@ const FormOnline = ({ type, step, dispatch }) => {
         setTitle('');
         setDescription('');
         setTags([]);
+        setTag('');
         setEdition(1);
         setTelephone();
         setAddress('');
