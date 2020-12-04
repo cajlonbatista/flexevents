@@ -10,8 +10,12 @@ const OneventSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  schedule: {
+  start: {
     type: String,
+    required: true,
+  },
+  edition: {
+    type: Number,
     required: true,
   },
   telephone: {
@@ -32,9 +36,13 @@ const OneventSchema = new mongoose.Schema({
       required: false,
     }
   ],
+  type: {
+    type: String,
+    required: true,
+  },
   status: {
     type: String,
-    default: 'online',
+    required: true,
   }
 });
 

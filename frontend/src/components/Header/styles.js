@@ -5,8 +5,11 @@ export const HeaderContainer = styled.header`
   display: flex;
   justify-content: space-between;
   position: fixed;
+  top: 0;
+  z-index: 10;
   padding: 15px 25px;
   background: #FF5F5F;
+ 
   >a:first-child{
     display: flex;
     align-items: center;
@@ -29,22 +32,32 @@ export const HeaderContainer = styled.header`
   div:last-child{
     display: flex;
     align-items: center;
-    >a{
-      display: flex;
-      align-items: center;
-      padding: 5px 10px;
-      border-radius: 5px;
-      text-decoration: none;
-      margin-right: 20px;
-      img{
-        width: 20px;
-        margin-right: 5px;
+    div{
+      >a{
+        display: flex;
+        align-items: center;
+        padding: 5px 10px;
+        border-radius: 5px;
+        text-decoration: none;
+        margin-right: 20px;
+        img{
+          width: 20px;
+          margin-right: 5px;
+        }
+        span{
+          font-family: Ubuntu, sans-serif;
+          font-size: 14px;
+          color: #303030;
+        }
       }
-      span{
-        font-family: Ubuntu, sans-serif;
-        font-size: 14px;
-        color: #303030;
-      }
+    } 
+  }
+  @media(max-width: 500px){
+    div:last-child{
+      display: none;
+    }
+    article{
+      display: block;
     }
   }
 `;

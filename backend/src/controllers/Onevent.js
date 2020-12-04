@@ -5,7 +5,7 @@ const Onevent = mongoose.model("Onevent");
 module.exports = {
   async show(req, res) {
     try {
-      const onevents = await Onevent.find();
+      const onevents = await Onevent.find({ status: 'active'});
 
       return res.status(200).json(onevents);
     } catch (error) {
@@ -15,7 +15,7 @@ module.exports = {
   async search(req, res) {
     try {
       const { tag } = req.params;
-      const onevents = await Onevent.find({ tags: tag });
+      const onevents = await Onevent.find({ tags: tag, status: 'active' });
 
       return res.status(200).json(onevents);
     } catch (error) {

@@ -10,23 +10,23 @@ const PreventSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  schedule: {
-    type: String,
-    required: true,
-  },
   telephone: {
     type: String,
     required: true,
   },
-  street: {
+  start: {
     type: String,
+    required: true,
+  },
+  edition: {
+    type: Number,
     required: true,
   },
   number: {
     type: Number,
     required: true,
   },
-  neighborhood: {
+  cep: {
     type: String,
     required: true,
   },
@@ -40,10 +40,14 @@ const PreventSchema = new mongoose.Schema({
       required: false,
     }
   ],
+  type: {
+    type: String,
+    required: true,
+  },
   status: {
     type: String,
-    default: 'presential',
-  },
+    required: true,
+  }
 });
 
 PreventSchema.plugin(mongoosePaginate);
