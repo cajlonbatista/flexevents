@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 
 import axios from 'axios';
 import isValidCep from '@brazilian-utils/is-valid-cep';
+import { connect } from 'react-redux';
+import { toggleStep } from "../../store/actions";
 
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 import { Chip, IconButton } from "@material-ui/core";
@@ -29,9 +31,9 @@ const chipTheme = createMuiTheme({
   },
 });
 
-export default function FormOnline(props) {
-  const { type } = props;
 
+const FormOnline = ({ type, step, dispatch }) => {
+  
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [telephone, setTelephone] = useState();
@@ -117,9 +119,9 @@ export default function FormOnline(props) {
     <FormContainer>
       <ThemeProvider theme={chipTheme}>
         <header>
-          <a href='/add'>
-            <img src={backicon} alt='Voltar'/>
-          </a>
+          <div>
+            <img src={backicon} alt='Voltar' onClick={e => dispatch(toggleStep(1)) }/>
+          </div>
           <h1>Dados do Envento</h1>
         </header>
 
@@ -210,3 +212,5 @@ export default function FormOnline(props) {
     </FormContainer>
   );
 };
+
+export default connect(state => ({ step: state.step, type: state.tipo }))(FormOnline);

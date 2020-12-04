@@ -57,10 +57,11 @@ export const FormContainer = styled.section`
     justify-content: center;
     align-items: center;
     margin: 10px auto;
-    a img{
+    div img{
       width: 30px;
       margin-bottom: 5px;
       margin-right: 20px;
+      cursor: pointer;
     }
     h1{
       color: #505050;
