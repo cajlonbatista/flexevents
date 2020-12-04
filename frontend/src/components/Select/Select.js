@@ -23,7 +23,6 @@ const radioTheme = createMuiTheme({
 
 });
 
-
 const Select = ({ tipo, step, dispatch }) => {
   return (
     <SelectEvent>

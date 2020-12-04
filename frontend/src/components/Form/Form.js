@@ -161,11 +161,11 @@ const FormOnline = ({ type, step, dispatch }) => {
                 <FormDuoBox>
                   <div>
                     <label htmlFor='cep'>CEP</label>
-                    <input required type='number' value={cep} onChange={e => setCep(e.target.value)} name='cep' />
+                    <input required type='number' min='1'  value={cep} onChange={e => setCep(e.target.value)} name='cep' />
                   </div>
                   <div>
                     <label htmlFor='number'>Número</label>
-                    <input required type='number' value={number} onChange={e => setNumber(e.target.value)} name='number' />
+                    <input required type='number' min='1'  value={number} onChange={e => setNumber(e.target.value)} name='number' />
                   </div>
                 </FormDuoBox>
             }

@@ -5,7 +5,7 @@ const Onevent = mongoose.model("Onevent");
 module.exports = {
   async show(req, res) {
     try {
-      const onevents = await Onevent.find({ status: 'active'});
+      const onevents = await Onevent.paginate({ status: 'active' }, { page: 1, limit: 4});
 
       return res.status(200).json(onevents);
     } catch (error) {
