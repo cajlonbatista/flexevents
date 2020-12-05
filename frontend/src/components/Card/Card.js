@@ -207,12 +207,11 @@ const Card = (props) => {
         </ThemeProvider>
         <ThemeProvider theme={dialogTheme}>
           <Dialog style={{ zIndex: 13 }} fullScreen open={dialog} onClose={dialogClose}>
-            <AppBar>
+            <AppBar style={{boxShadow: "none"}}>
               <Toolbar>
                 <IconButton edge="start" color="inherit" onClick={dialogClose} aria-label="close">
                   <Close />
                 </IconButton>
-              Editando
             </Toolbar>
             </AppBar>
             <DialogContent>
