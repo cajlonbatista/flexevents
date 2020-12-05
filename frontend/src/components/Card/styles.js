@@ -1,41 +1,51 @@
 import styled from 'styled-components';
 
-import { Link } from 'react-router-dom';
 
-export const CardContainer = styled(Link)`
+export const CardContainer = styled.div`
   width: 100%;
   height: 100%;
   text-decoration: none;
   border-radius: 10px;
   transition: all 0.4s;
-
+  background: #f9f9f9;
+  position: relative;
   :focus,:hover{
     box-shadow: 0px 0px 3px 0px rgba(183,183,183,0.75);
   }
   >header{
     display: flex;
     justify-content: space-between;
-    span:first-child{
-      padding: 5px 10px;
-      border-radius: 10px 5px 5px 5px;
+    a:hover{
+      text-decoration: underline;
     }
-    span:last-child{
-      margin: 5px 10px;
+    div:first-child{
+      border-radius: 10px;
+      padding: 5px;
+      cursor: pointer;
     }
     span{
-      color: #303030;
+      padding: 5px 10px;
     }
   }
   >article{
-    padding: 5px 10px;
+    padding: 10px 20px!important;
+    span{
+      font-family: Open Sans, sans-serif;
+      font-size: 13px;
+    }
     h1{
       font-family: Ubuntu, sans-serif;
-      font-size: 17px;
+      font-size: 20px;
     }
     p{
       font-family: Open Sans, sans-serif;
-      font-size: 13px;
+      font-size: 14px;
       color: #303030;
+      text-align: justify;
     }
   }
+`;
+
+export const DialogContent = styled.div`
+
 `;

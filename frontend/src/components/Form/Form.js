@@ -5,7 +5,7 @@ import isValidCep from '@brazilian-utils/is-valid-cep';
 import { connect } from 'react-redux';
 import { toggleStep } from "../../store/actions";
 
-import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
+import { ThemeProvider } from "@material-ui/core/styles";
 import { Chip, IconButton } from "@material-ui/core";
 import PhoneInput from 'react-phone-number-input';
 import { message, Spin } from "antd";
@@ -14,22 +14,8 @@ import addicon from "../../global/assets/add.svg";
 import backicon from '../../global/assets/back.svg';
 
 import { FormContainer, FormBox, FormDuoBox, SubmitButton } from './styles';
+import { chipTheme } from '../../themes/themes';
 import 'react-phone-number-input/style.css';
-
-const chipTheme = createMuiTheme({
-  palette: {
-    primary: {
-      main: "#FF5F5F",
-      contrastText: "#303030",
-    },
-  },
-  typography: {
-    fontFamily: [
-      'Inter'
-    ].join(','),
-    fontSize: 14
-  },
-});
 
 
 const FormOnline = ({ type, step, dispatch }) => {
@@ -123,7 +109,7 @@ const FormOnline = ({ type, step, dispatch }) => {
           <div>
             <img src={backicon} alt='Voltar' onClick={e => dispatch(toggleStep(1)) }/>
           </div>
-          <h1>Dados do Envento</h1>
+          <h1>Dados do Evento</h1>
         </header>
 
         <form onSubmit={onAddEnvent}>

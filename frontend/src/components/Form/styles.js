@@ -71,7 +71,7 @@ export const FormContainer = styled.section`
     }
   }
   section{
-    article{
+    article:first-child{
       display: flex;
       align-items: center;
       >div{
@@ -98,6 +98,7 @@ export const FormContainer = styled.section`
         }
       }
     }
+    
   }
 `;
 

@@ -4,24 +4,11 @@ import { connect } from 'react-redux';
 import { toggleStep, toggleType } from "../../store/actions";
 
 import { Radio, FormControlLabel, RadioGroup } from '@material-ui/core';
-import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import { ThemeProvider } from '@material-ui/core/styles';
 
+import { radioTheme }  from '../../themes/themes';
 import { SelectEvent } from './styles';
 
-const radioTheme = createMuiTheme({
-  palette: {
-    secondary: {
-      main: '#FF5F5F',
-    },
-  },
-  typography: {
-    fontFamily: [
-      'Inter'
-    ].join(','),
-    fontSize: 12.5
-  },
-
-});
 
 const Select = ({ tipo, step, dispatch }) => {
   return (
