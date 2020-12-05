@@ -153,11 +153,11 @@ const Card = (props) => {
           {
             (type === 'online')
               ?
-              <div style={{ background: '#31e0ab' }} onClick={poupOpen}>
+              <div style={{ background: '#31e0ab' }}>
                 <img src={moreicon} width='20px' alt='more' />
               </div>
               :
-              <div style={{ background: '#ff5f5f' }} onClick={poupOpen}>
+              <div style={{ background: '#ff5f5f' }}>
                 <img src={moreicon} width='20px' alt='more' />
               </div>
           }
