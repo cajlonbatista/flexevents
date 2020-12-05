@@ -1,5 +1,4 @@
-# Your Event
-
+# Flex Events
 ### 🔑 Environment Variables:
 
 In the folder frontend create a file .env with these configurations:
