@@ -57,4 +57,7 @@ export const SelectEvent = styled.section`
       }
     }
   }
+  @media(max-width: 500px){
+    background-image: none;
+  }
 `;
