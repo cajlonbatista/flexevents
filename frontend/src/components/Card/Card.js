@@ -153,11 +153,11 @@ const Card = (props) => {
           {
             (type === 'online')
               ?
-              <div style={{ background: '#31e0ab' }}>
+              <div style={{ background: '#31e0ab' }} onClick={poupOpen}>
                 <img src={moreicon} width='20px' alt='more' />
               </div>
               :
-              <div style={{ background: '#ff5f5f' }}>
+              <div style={{ background: '#ff5f5f' }} onClick={poupOpen}>
                 <img src={moreicon} width='20px' alt='more' />
               </div>
           }
@@ -169,7 +169,7 @@ const Card = (props) => {
             {
               (type === 'online')
                 ?
-                <p style={{ textTransform: 'capitalize' }} onClick={poupOpen}>
+                <p style={{ textTransform: 'capitalize' }} >
                   {edition}º Edição {type}
                 </p>
                 :
@@ -181,7 +181,7 @@ const Card = (props) => {
             {
               (type === 'online')
                 ?
-                <span>Local: <a href={address} rel='noreferrer' target='_blank'>{address}</a></span>
+                <span>Local: <a href={address} rel='no' target='_blank'>{address}</a></span>
                 :
                 <span>Local: {(endereco.logradouro == undefined) ? <i>Endereço Inválido</i> : `${endereco.logradouro}, ${endereco.bairro}, ${endereco.cidade}-${endereco.uf}, N ${number}`}</span>
             }
