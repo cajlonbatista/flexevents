@@ -25,6 +25,7 @@ export const SelectEvent = styled.section`
     border: 2px solid transparent;
     margin: auto;
     padding: 20px;
+    animation: transponder 0.3s linear;
     h1{
       font-family: Ubuntu, sans-serif;
       font-size: clamp(1em, 1em + 1vw, 1.25em);

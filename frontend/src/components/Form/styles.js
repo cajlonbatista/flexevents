@@ -49,7 +49,7 @@ export const FormContainer = styled.section`
     border-radius: 10px;
     margin: auto;
     padding: 20px 3%;
-    
+    animation: transponder 0.3s linear;
   }
   header{
     width: 100%;

@@ -181,7 +181,7 @@ const Card = (props) => {
             {
               (type === 'online')
                 ?
-                <span>Local: <a href={address}>{address}</a></span>
+                <span>Local: <a href={address} rel='noreferrer' target='_blank'>{address}</a></span>
                 :
                 <span>Local: {(endereco.logradouro == undefined) ? <i>Endereço Inválido</i> : `${endereco.logradouro}, ${endereco.bairro}, ${endereco.cidade}-${endereco.uf}, N ${number}`}</span>
             }

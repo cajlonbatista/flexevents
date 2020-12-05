@@ -1,8 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo&family=Inter&family=Open+Sans&family=Poppins&family=Ubuntu&display=swap');
+@import url('../animations/animations.css');
 @import '~antd/dist/antd.css';
-
-*{
+* {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+@media(min-width: 600px) {
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #FF5F5F;
+  }
 }

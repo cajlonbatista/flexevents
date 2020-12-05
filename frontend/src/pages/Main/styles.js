@@ -70,12 +70,14 @@ export const MainContainer = styled.div`
     }
   }
   section{
-    padding-top: 40px;
+    padding: 40px 0px;
     article{
-      padding: 5px 10px;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(auto, 400px));
+      grid-auto-rows: min-content;
+      justify-content: space-around;
       grid-gap: 10px;
+      overflow-x: hidden;
       >a{
         background: #f7f7fd;
       }
